@@ -1,0 +1,79 @@
+<div class="container mt-5">
+    <h2>User Management</h2>
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#userModal" (click)="openModal()">Create User<i class="bi bi-people"></i></button>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>User id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact Number</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+            <td>101</td>
+          <td>nithish</td>
+          <td>nithish&#64;gmail.com</td>
+          <td>7000024433</td>
+          <td>project manager</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2">Edit</button>
+            <button class="btn btn-danger btn-sm" >Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  
+
+
+
+  
+    
+    <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="userModalLabel">Create New User</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="userName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="userName"  name="name">
+              </div>
+              <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail"  name="email">
+              </div>
+              <div class="mb-3">
+                <label for="userContact" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="userContact" name="contact">
+              </div>
+              <div class="mb-3">
+                <label for="userRole" class="form-label">Role</label>
+                <select class="form-select" id="userRole" name="role">
+                  <option value="admin">Admin</option>
+                  <option value="project-manager">Project Manager</option>
+                  <option value="team-member">Team Member</option>
+                </select>
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary "  data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" >Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Button to trigger the modal -->

@@ -1,0 +1,59 @@
+<!-- src/app/user-management/user-list/user-list.component.html -->
+<div class="container mt-5">
+  <h2>User Management</h2>
+  <button class="btn btn-primary mb-3" (click)="openCreateModal()">Create User</button>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>User id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{user.contact}}</td>
+        <td>{{user.role}}</td>
+        <td>
+          <button class="btn btn-warning btn-sm me-2" (click)="openEditModal(user)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal -->
+  <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userModalLabel">{{ isEdit ? 'Edit User' : 'Create User' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="userName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="userName" [(ngModel)]="selectedUser.name" name="name">
+            </div>
+            <div class="mb-3">
+              <label for="userEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="userEmail" [(ngModel)]="selectedUser.email" name="email">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="saveUser()">{{ isEdit ? 'Update' : 'Create' }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

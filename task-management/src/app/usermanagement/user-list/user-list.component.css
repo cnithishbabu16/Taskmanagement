@@ -1,0 +1,14 @@
+/* src/app/user-management/user-list/user-list.component.css */
+.container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+  }
+  
