@@ -1,0 +1,34 @@
+{"ProfileService":{
+    "username": "john_doe",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "company": "Example Corp",
+    "designation": "Software Engineer",
+    "bio": "A passionate software engineer with a love for coding.",
+    "birthday": "1990-05-03",
+    "country": "Canada",
+    "phone": "+1 (123) 456-7891",
+    "website": "https://www.johndoe.com",
+    "socialLinks": {
+      "twitter": "https://twitter.com/john_doe",
+      "facebook": "https://www.facebook.com/john.doe",
+      "googlePlus": "",
+      "linkedIn": "https://www.linkedin.com/in/johndoe",
+      "instagram": "https://www.instagram.com/john_doe"
+    },
+    "notifications": {
+      "activity": {
+        "comment": true,
+        "answer": true,
+        "follow": false
+      },
+      "application": {
+        "news": true,
+        "updates": false,
+        "blog": true
+      }
+    }
+  }
+}
+
+  
