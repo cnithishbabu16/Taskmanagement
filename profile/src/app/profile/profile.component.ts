@@ -11,7 +11,8 @@ import { ProfileService } from '../profile.service';
 })
 
 export class ProfileComponent{
-  setgs:ProfileService1={
+  selectedTab:string='general';
+  settings:ProfileService1={
     username: '',
     name: '',
     email: '',
@@ -46,6 +47,10 @@ export class ProfileComponent{
 
   constructor(private profileService:ProfileService){}
    saveSettings(){
-       this.profileService.saveSettings(this).
+      // this.profileService.saveSettings(this).
    }
+   selectTab(tab: string) {
+    this.selectedTab = tab;
+  }
+
 }
